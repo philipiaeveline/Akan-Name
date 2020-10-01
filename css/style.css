@@ -13,4 +13,8 @@ body{
 .head{
 color: green;
     font-style: italic;
+    text-align: center;
+}
+.panel{
+    background-color:gold;
 }
