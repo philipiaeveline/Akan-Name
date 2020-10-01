@@ -2,9 +2,11 @@ body{
     background-image: url("https://cdn.pixabay.com/photo/2017/05/23/22/33/happy-birthday-2338813__340.jpg");
     font-family: 'marmelad' sans-serif;
     font-size:26px;
-
 }
 
+form{
+    color: blue;
+}
 .name{
     color:green;
     text-align: center;
