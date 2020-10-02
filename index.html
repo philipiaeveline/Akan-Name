@@ -18,83 +18,77 @@
             <div class="head">
                 <h1><strong>Below are my Akan Name</strong></h1>
             </div>
-                <p><br>Today, many Akan people have a first, middle, and last name or surname<br>A mat is spread on the
-                    floor and the child is lifted three times, placed on the mat naked, and the<br>broom is put in her
-                    hand and she is covered with the calabash; after a second or so, the calabash is removed.</p>
-                <a href="https://en.wikipedia.org/wiki/Akan_names">Click to learn more</a><br>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="panel panel-info">
-                            <div class="panel-heading"><strong>MALE</strong></div>
-                            <div class="panel-body">
-                                <ul>
-                                    <li>Sunday:Kwasi</li>
-                                    <li>Monday:Kwadwo</li>
-                                    <li>Tuesday:Kwabena</li>
-                                    <li>Wednesday:Kwaku</li>
-                                    <li>Thursday:Yaw</li>
-                                    <li>Friday:Kofi</li>
-                                    <li>Saturday:kwame</li>
-                                </ul>
-                            </div>
+            <p><br>Today, many Akan people have a first, middle, and last name or surname<br>A mat is spread on the
+                floor and the child is lifted three times, placed on the mat naked, and the<br>broom is put in her
+                hand and she is covered with the calabash; after a second or so, the calabash is removed.</p>
+            <a href="https://en.wikipedia.org/wiki/Akan_names">Click to learn more</a><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-info">
+                        <div class="panel-heading"><strong>MALE</strong></div>
+                        <div class="panel-body">
+                            <ul>
+                                <li>Sunday:Kwasi</li>
+                                <li>Monday:Kwadwo</li>
+                                <li>Tuesday:Kwabena</li>
+                                <li>Wednesday:Kwaku</li>
+                                <li>Thursday:Yaw</li>
+                                <li>Friday:Kofi</li>
+                                <li>Saturday:kwame</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="panel panel-info">
-                            <div class="panel-heading"><strong>FEMALE</strong></div>
-                            <div class="panel-body">
-                                <ul>
-                                    <li>Sunday:Akosua</li>
-                                    <li>Monday:Adwoa</li>
-                                    <li>Tuesday:Abenaa</li>
-                                    <li>Wednesday:Akua</li>
-                                    <li>Thursday:Yaa</li>
-                                    <li>Friday:Afua</li>
-                                    <li>Saturday:Ama</li>
-                                </ul>
-                            </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-info">
+                        <div class="panel-heading"><strong>FEMALE</strong></div>
+                        <div class="panel-body">
+                            <ul>
+                                <li>Sunday:Akosua</li>
+                                <li>Monday:Adwoa</li>
+                                <li>Tuesday:Abenaa</li>
+                                <li>Wednesday:Akua</li>
+                                <li>Thursday:Yaa</li>
+                                <li>Friday:Afua</li>
+                                <li>Saturday:Ama</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-        <form>
+    </div>
+    <div class="container">
+        <form name="myForm">
             <div class="form-group">
-                <label for="number">Years</label>
-                <input type="number" class="form-control" id="year" placeholder="Enter Year" name="year" required>
-                <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Please fill out this field.</div>
+                <label for="year">year</label>
+                <input type="number" class="form-control" placeholder="Year" id="year">
             </div>
             <div class="form-group">
-                <label for="number">Months</label>
-                <input type="number" class="form-control" id="months" placeholder="Months" name="months"required>
-                <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Please fill out this field.</div>
+                <label for="Month">Month</label>
+                <input type="number" class="form-control" placeholder="Month" id="month">
             </div>
             <div class="form-group">
-                <label for="number">Days</label>
-                <input type="number" class="form-control" id="days" placeholder="days" name="days" required>
-                <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Please fill out this field.</div>
+                <label for="Day">Day</label>
+                <input type="number" class="form-control" placeholder="Day" id="day">
             </div>
-      
-            <div class="form-check">
-                <label class="form-checphilipiaeveline@gmailk-label">
-                    <input class="Gender" type="radio" name="gender" id=male>Male
-                    <input class="form-check-input" type="radio" name="gender" id=female>Female
-                    <div class="valid-fee">
+            <div class="radio">
+                <label class="gender">
+                    <input class="radio" type="radio" name="gender" id="male">Male
+                    <input class="radio" type="radio" name="gender" id="female">Female
                 </label>
             </div>
-            <button type="submit" class="btn btn-primary">Click to view</button>
-        </form>  
-        <script src="js/script.js"></script>
-        <div class="footer">
-            <footer>
-                <p>philipiaeveline@gmail</p>
-            </footer>
-        </div>
-        </div>
+            <button type="button" class="btn-primary" onclick="myClick()">click</button>
+            <button type="button" class="btn-primary" onclick="reset">Reset</button>
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+    <div class="footer">
+        <footer>
+            <p>philipiaeveline@gmail</p>
+        </footer>
+    </div>
 </body>
 
 </html>
