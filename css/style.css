@@ -36,4 +36,8 @@ color: green;
     background-color: yellowgreen;
   }
 }
+ .form-check{
+     display: flex;
+ }
+
   
