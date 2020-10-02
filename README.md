@@ -9,9 +9,12 @@ broom is put in her hand and she is covered with the calabash; after a second or
 * in a simple
 * easy-to-understand
 * format
+## Demo
+https://github.com/philipiaeveline/Akan-Name  this my link to my project
 ## Technologies Used#
 * CSS
 * HTML
+* Booatrap
 * JS
 ## Support and contact details
 * Here are some of my details to reach me.
