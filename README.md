@@ -1,5 +1,7 @@
 # {AKAN NAME}
-#### {Success is the key to education so never give up.}, {25/09/2020}
+#### {Today, many Akan people have a first, middle, and last name or surname
+A mat is spread on the floor and the child is lifted three times, placed on the mat naked, and the
+broom is put in her hand and she is covered with the calabash; after a second or so, the calabash is removed.}, {2/10/2020}
 #### By **{PHILIPIA EVELINE}**
 ## Setup/Installation Requirements
 * This is a great place
