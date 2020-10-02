@@ -1,55 +1,80 @@
-function day (cc,yy,mm,dd){
-    return ((((cc/19)+1*cc-1)+((5*yy/4)) + ((26*(mm+1)/10)) + dd)%7)+1
+var CC, YY, MM, DD, d, dayValue;
+var dayNames = ["Sunday","Monday","Tuesday","Wednesday", "Thursday", "Friday","Saturday" ];
+var maleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw", "Kofi","Kwame"];
+var femaleNames = ["Akosua","Adwoa","Abenaa","Akua"," Yaa","Afua","Ama"];
+function validate() {
+  var genders = document.getElementsByName("gender");
+  if( document.myForm.century.value == "" || isNaN( document.myForm.century.value ) ||
+  document.myForm.century.value.length > 2||document.myForm.century.value >  20 || document.myForm.century.value <=0) {
+     alert( "Please provide a valid Century of birth! eg 20 for the year 2019 and can not be greater than 20");
+     document.myForm.century.focus() ;
+     return false;
   }
-  function  gd() {
-  var cc = (document.getElementById("Id1").value);
-  var yy = (document.getElementById("Id2").value);
-  var mm = (document.getElementById("Id3").value);
-  var dd = (document.getElementById("Id4").value);
-  var gender=(document.getElementById("Id5").value);
-  var result=day(cc,yy,mm,dd).toFixed();
-  var males = ["Kwasi", "kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
-  var females = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
-  if (gender == "male" && result == 0) {
-      alert(males[0]);
+  else if( document.myForm.year.value == "" || isNaN( document.myForm.year.value ) ||
+  document.myForm.year.value.length > 2 || document.myForm.year.value > 99  || document.myForm.year.value <=0) {
+     alert( "Please provide a valid year of birth! eg 19 for 2019" );
+  if( document.myForm.year.value == "" || document.myForm.year.value.length !=4 || document.myForm.year.value >2100 || document.myForm.year.value <=1900) {
+     alert( "Please provide a valid year of birth! eg 2019" );
+     document.myForm.year.focus() ;
+     return false;
+  }
+  else if( document.myForm.month.value == "" || isNaN( document.myForm.month.value ) ||
+  document.myForm.month.value.length > 2 || document.myForm.month.value > 12  || document.myForm.month.value <= 0){
+  document.myForm.month.value.length != 2 || document.myForm.month.value > 12  || document.myForm.month.value <= 0){
+     alert( "Please provide your month of birth! between 1 and 12" );
+     document.myForm.month.focus() ;
+     return false;
+  }
+  else if( document.myForm.date.value == "" || document.myForm.date.value > 31 || document.myForm.date.value <= 0) {
+  else if( document.myForm.date.value == "" || isNaN( document.myForm.month.value ) ||
+  document.myForm.month.value.length != 2|| document.myForm.date.value > 31 || document.myForm.date.value <= 0) {
+     alert( "Please provide a valid date that you were born in!" );
+     document.myForm.day.focus() ;
+     return false;
+  }
+  else if(genders[0].checked==false && genders[1].checked==false ) {
+    alert("You must select male or female");
+    return false;
+}
+else{
+  return( true );
+  return true ;
+}
+}
+function calculateDayValue(){
+CC = parseInt(document.getElementById("century").value);
+YY = parseInt(document.getElementById("year").value);
+year = document.getElementById("year").value;
+CC = parseInt(year.substring(0,2));
+YY = parseInt(year.substring(2,4));
+MM = parseInt(document.getElementById("month").value);
+DD = parseInt(document.getElementById("date").value);
+d = ( ( (CC/4) -2*CC-1) + ( (5*YY/4) ) + ((26*(MM+1)/10) ) + DD)%7;
+console.log(d);
+return (Math.floor(d));
+}
+function getGender(){
+var genders = document.getElementsByName("gender");
+if(genders[0].checked == true){
+  var gender = "male";
+}
+else if(genders[1].checked == true){
+  var gender = "female";
+}
+else{
+  return false;
+}
+switch(gender){
+  case "male":
+    if (dayValue == 1){
+      alert("You were born on " +dayNames[0] + " and Your akan name is " +maleNames[0]+"!");
     }
-  var cc = parseInt(prompt("Enter Year"));
-  var yy = parseInt(prompt("Months"));
-  var mm = parseInt(prompt("days"));
-  var dd = parseInt(prompt("Enter the date of birth"));
-  var gender= prompt("your gender")
-  var result=day(cc,yy,mm,dd).toFixed();
-  var males = ["Kwasi", "kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
-  var females = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
-  if (gender == "male" && result == 0) {
-    alert(males[0]);
-  } else if (gender == "male" && result == 1) {
-    alert(males[1]);
-  } else if (gender == "male" && result == 2) {
-    alert(males[2]);
-  } else if (gender == "male" && result == 3) {
-    alert(males[3]);
-  } else if (gender == "male" && result == 4) {
-    alert(males[4]);
-  } else if (gender == "male" && result == 5) {
-    alert(males[5]);
-  } else if (gender == "male" && result == 6) {
-    alert(males[6]);
-  } else if (gender == "female" && result == 0) {
-    alert(females[0]);
-  } else if (gender == "female" && result == 1) {
-    alert(females[1]);
-  } else if (gender == "female" && result == 2) {
-    alert(females[2]);
-  } else if (gender == "female" && result == 3) {
-    alert(females[3]);
-  } else if (gender == "female" && result == 4) {
-    alert(females[4]);
-  } else if (gender == "female" && result == 5) {
-    alert(females[5]);
-  } else if (gender == "female" && result == 6) {
-    alert(females[6]);
-  } else {
-    alert("null");
-  }
-  }
+    else if(dayValue == 2){
+      alert("You were born on "+dayNames[1] + " and Your akan name is " +maleNames[1]+"!");
+    }
+    else if(dayValue == 3){
+      alert("You were born on " +dayNames[2]+ " and Your akan name is " +maleNames[2]+"!");
+    }
+    else if(dayValue == 4){
+      alert("You were born on "+dayNames[3] +  " and Your akan name is " +maleNames[3]+"!");
+    }
